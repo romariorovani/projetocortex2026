@@ -9,6 +9,8 @@
   --white: #ffffff;
   --warning: #fff5e6;
   --success: #e8f5e9;
+  --family: #fef3c7;
+  --educator: #e0f2fe;
 }
 
 * {
@@ -159,6 +161,35 @@ p {
   border-radius: 10px;
   padding: 16px;
   background: #fbfcfe;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.card {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.card:hover,
+a.card:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.audience-card {
+  border-left: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.audience-card.family {
+  background: var(--family);
+  border-left-color: #f59e0b;
+}
+
+.audience-card.educator {
+  background: var(--educator);
+  border-left-color: #0ea5e9;
 }
 
 .badge {
